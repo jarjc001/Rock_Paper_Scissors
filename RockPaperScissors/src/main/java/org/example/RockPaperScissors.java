@@ -33,7 +33,7 @@ public class RockPaperScissors {
         //to read console inputs
         Scanner myScanner = new Scanner(System.in);
 
-        //declare and initialise a Random number generater
+        //declare and initialise a Random number generate
         //to choose a random item to play
         Random rng = new Random();
 
@@ -44,7 +44,7 @@ public class RockPaperScissors {
 
         /**
          * repeat zone, do a loop from here
-         * and state variebels to zero here maybe?
+         * and state variables to zero here maybe?
          */
 
 
@@ -79,11 +79,14 @@ public class RockPaperScissors {
             computerItem = rng.nextInt(3);
 
             /**
-             *do a function to show what the computer playes maybe? ask about it
+             *do a function to show what the computer plays maybe? ask about it
              */
 
             //The if statements determines if the user wins, losses or ties
             //showing a message for each case and tracking it
+            //Someone wins if their item is 1 greater than their opponent's item
+            //eg: paper(1) beats rock(0)
+            //% is used to wrap rock around to be greater than scissors
             if (userItem == computerItem) {
                 //The user ties with the computer
                 System.out.println("Tie");
