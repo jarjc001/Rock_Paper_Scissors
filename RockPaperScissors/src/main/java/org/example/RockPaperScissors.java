@@ -7,11 +7,18 @@ import static java.lang.System.exit;
 
 public class RockPaperScissors {
 
+    /**Variable to see if the user wants to play again*/
+    public static boolean repeatGame;
+
+    /**declare and initialise a Scanner object to read console inputs*/
+    public static Scanner myScanner = new Scanner(System.in);
+
+    /**declare and initialise a Random number generator */
+    public static Random rng = new Random();
+
+
+
     public static void main(String[] args) {
-
-        //Variable to see if the user wants to play again
-        boolean repeatGame = false;
-
         //welcome message
         System.out.println("_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_\n");
         System.out.println("Rock Paper Scissors");
@@ -27,11 +34,12 @@ public class RockPaperScissors {
             declareWinner(results);
 
             //Asks the user if they want to play again
-            repeatGame = playAgain(repeatGame);
+            playAgain();
 
         }while(repeatGame);
 
     }
+
 
     /**
      * Asks the user for the amount of rounds they want to play
@@ -43,10 +51,6 @@ public class RockPaperScissors {
         //CONSTANTS of the min and max # of rounds
         final int MIN_ROUNDS = 1;
         final int MAX_ROUNDS = 10;
-
-        //declare and initialise a Scanner object
-        //to read console inputs
-        Scanner myScanner = new Scanner(System.in);
 
         //prompt user for the number of rounds they want to play
         System.out.println("\n_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_");
@@ -77,14 +81,6 @@ public class RockPaperScissors {
 
         //Variables of the choice of Item the user and computer uses
         int userChoice, computerChoice;
-
-        //declare and initialise a Random number generator
-        //to choose a random item to play
-        Random rng = new Random();
-
-        //declare and initialise a Scanner object
-        //to read console inputs
-        Scanner myScanner = new Scanner(System.in);
 
         //Creates a for loop for each round of the game
         //with roundCount as the round Counter
@@ -181,14 +177,8 @@ public class RockPaperScissors {
     /**
      * Will prompt the user if they want to play again
      * will either stop or continue the do-while loop of the whole program
-     * @param repeatGame  decides whether the do-while loop repeats
-     * @return returns the modified input
      */
-    public static boolean playAgain(boolean repeatGame){
-        //declare and initialise a Scanner object
-        //to read console inputs
-        Scanner myScanner = new Scanner(System.in);
-
+    public static void playAgain(){
         //prompt user if they want to play again
         System.out.println("Do you want to play again y/n?");
         //Scans input as the user's response
@@ -204,8 +194,6 @@ public class RockPaperScissors {
                 System.out.println("\nThanks for Playing!\n");
                 break;
         }
-
-        return repeatGame;
     }
 
 
