@@ -8,7 +8,7 @@ import static java.lang.System.exit;
 public class RockPaperScissors {
 
     /**Variable to see if the user wants to play again*/
-    public static boolean repeatGame;
+    public static boolean repeatGame=true;
 
     /**declare and initialise a Scanner object to read console inputs*/
     public static Scanner myScanner = new Scanner(System.in);
@@ -179,9 +179,12 @@ public class RockPaperScissors {
      * will either stop or continue the do-while loop of the whole program
      */
     public static void playAgain(){
+
+
         //prompt user if they want to play again
         System.out.println("Do you want to play again y/n?");
-        //Scans input as the user's response
+        //Scans input asn the user's response
+        Scanner myScanner = new Scanner(System.in);
         String response = myScanner.nextLine();
 
         //switch will change the repeatGame variable based on user's response
@@ -191,9 +194,10 @@ public class RockPaperScissors {
                 break;
             case "n":
                 repeatGame=false;
-                System.out.println("\nThanks for Playing!\n");
+                System.out.println("\nThanks for Playing!");
                 break;
         }
+
     }
 
 
