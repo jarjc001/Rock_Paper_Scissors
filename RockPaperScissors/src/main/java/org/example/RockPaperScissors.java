@@ -94,6 +94,8 @@ public class RockPaperScissors {
 
             //Generate a random number to determine the computer's Item
             computerChoice = rng.nextInt(3);
+            System.out.println(userChoice);
+            System.out.println(computerChoice);
 
             //Plays one round and records the result to the running total of scores
             oneRound(scores,userChoice,computerChoice);
