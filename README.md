@@ -44,3 +44,10 @@ This program will be a Java console application named RockPaperScissors.
     After all rounds have been played and the winner declared, the program must ask the user if he/she wants to play again.
         If the user says No, the program prints out a message like, “Thanks for playing!” and then exits.
         If the user says Yes, the program starts over, asking the user how many rounds he/she would like to play.
+        
+        
+Feedback
+Graded by Eugene O'Regan
+100.00 %
+Comments: Documented and well structured code. Excellent
+
